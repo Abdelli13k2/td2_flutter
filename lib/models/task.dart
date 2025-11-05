@@ -36,4 +36,21 @@ class Task {
     }
     return tasks;
   }
+
+  static Task fromJson(Map<String, dynamic> json) {
+    final tags =
+        (json['tags'] as List?)?.map((e) => e.toString()).toList() ?? [];
+
+    return Task(
+      id: json['id'],
+      title: json['title'],
+      tags: tags,
+      nbhours: json['nbhours'],
+      difficulty: json['difficulty'],
+      description: json['description'],
+      color: json['color'] != null
+          ? Color(int.parse(json['color'], radix: 16))
+          : Colors.greenAccent,
+    );
+  }
 }
