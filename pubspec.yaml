@@ -37,6 +37,14 @@ dependencies:
 
   google_fonts: ^6.3.2
 
+  provider: ^6.1.1
+  settings_ui: ^2.0.2
+  shared_preferences: ^2.2.2
+  sqflite: ^2.3.2
+  path: ^1.8.3
+  sqflite_common_fli: ^2.3.6
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
