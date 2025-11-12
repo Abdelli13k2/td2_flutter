@@ -9,7 +9,10 @@ class SettingViewModel extends ChangeNotifier {
   SettingViewModel() {
     _isDark = false;
     _settingRepository = SettingRepository();
-    getSettings();
+    // Attendre que le widget tree soit construit avant de charger les settings
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      getSettings();
+    });
   }
 
   //Switching the themes
