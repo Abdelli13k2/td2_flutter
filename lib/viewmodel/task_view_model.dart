@@ -26,10 +26,10 @@ class TaskViewModel extends ChangeNotifier {
             'id': id as int,
             'title': title as String,
             'description': description as String,
-            'tags': tags as String,
+            'tags': tags as List<String>,
             'nbhours': nbhours as int,
             'difficulty': difficulty as int,
-            'color': color as String,
+            'color': color as Color,
           }
           in taskMaps)
         Task(

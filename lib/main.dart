@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'viewmodel/task_view_model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
-import 'home.dart';
+import '/home.dart';
 import 'UI/mytheme.dart';
 
 Future<void> main() async {
@@ -59,8 +59,8 @@ class MyTD4 extends StatelessWidget {
         builder: (context, SettingViewModel notifier, child) {
           return MaterialApp(
             theme: notifier.isDark ? MyTheme.dark() : MyTheme.light(),
-            title: 'TD2',
-            home: const Home(),
+            title: 'TD4',
+            home: Home(),
           );
         },
       ),
